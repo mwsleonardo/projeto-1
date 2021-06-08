@@ -1,19 +1,81 @@
+/* FONTE LATO */
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../resources/lato-regular-webfont.woff2') format('woff2'),
+         url('../resources/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     margin: 0;
     padding: 0;
+    font-family: 'latoregular';
+    font-size: 20px;
+    font-weight: 400;
+    
 
 }
 
 
-
+/* Cabeçalho // Header */
 
 .header {
-    position: absolute;
     width: 100%;
     height: 60px;
-
     background-color: #E0E0E0;
-    ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+       
+}
 
+.logo {
+    width: 30px;
+    height: 27.63px;
+
+}
+
+.btn-menu {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+  
+}
+
+.responsive-menu {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    height: 100%;
+    width: 85.4%;
+    right: 0px;
+    top: 0px;
+    
+
+}
+
+.responsive-menu-text {
+    list-style-type: none;
+    font-size: 16px;
+    margin-top: 19px;
+    text-align: right;
+    margin-right: 19px;
+
+
+}
+
+
+.responsive-menu-x {
+    list-style-type: none;
+    margin-left: 20px;
+
+}
+
+.responsive-menu ul {
+    padding: 0;
 
 }
