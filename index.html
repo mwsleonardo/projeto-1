@@ -17,28 +17,69 @@
 
         <img src="images/logo.png" alt="logo" class="logo" />
         
-        <div>Controle financeiro</div>
+        <div class="header-title">Controle financeiro</div>
 
-        <div>
+        <input type="checkbox" id="check">
+        <label for="check">
+
+        <div class="buttons">
         <div class="btn-menu"></div>
         <div class="btn-menu"></div>
         <div class="btn-menu"></div>
         </div>
 
+        </label>
 
-        <div class="responsive-menu">
-        <ul>
-            <li class="responsive-menu-x">x</li>
+        <!-- Menu responsivo -->
+
+        <nav class="responsive-menu">
+            <ul>
+            <input type="checkbox" id="check2">
+            <label for="check">
+            <li class="responsive-menu-x">
+                <img src="images/x.png" alt="close" width="16px" height="16px"/>
+            </li>
+            </label> 
+
             <li class="responsive-menu-text">Cadastro de transações</li>
             <li class="responsive-menu-text">Limpar dados</li>
             <li class="responsive-menu-text">Salvar no servidor</li>
-        </ul>
-        </div>
-
-
+            </ul>
+      </nav>
     </div>
 
-    
+
+        <!-- Formulario -->
+
+    <div class="formulario">
+        <form>
+            <div class="campo">
+                <label for="transacao">Tipo de Transação</label>
+                <select id="transacao">
+                    <option>Compra</option>    
+                    <option>Venda</option>
+                </select>        
+            </div>
+
+            <nav class="grupo">
+                <div class="campo">
+                    <label for="mercadoria">Nome da Mercadoria</label>
+                    <input type="text" name="mercadoria" id="mercadoria" placeholder="  Input" required>
+                </div>
+
+                <div class="campo">
+                    <label for="valor">Valor</label>
+                    <input type="text" name="valor" id="valor" placeholder="  R$ 0,00" required>
+                </div>
+            </nav>
+            
+            <button class="button" type="submit">Adicionar transação</button>
+
+        </form>
+   </div>
+
+        <img class="linha" src="images/linha.png" width="80%"/>
+
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* FONTE LATO */
+/* Resources */
 
 @font-face {
     font-family: 'latoregular';
@@ -9,13 +9,14 @@
 
 }
 
+/* Main */
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'latoregular';
     font-size: 20px;
-    font-weight: 400;
-    
+    font-weight: 400; 
 
 }
 
@@ -27,26 +28,38 @@ body {
     height: 60px;
     background-color: #E0E0E0;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-       
+    justify-content: space-between;
+    
 }
 
 .logo {
     width: 30px;
     height: 27.63px;
+    margin-left: 22px;
 
 }
 
 .btn-menu {
-    width: 35px;
-    height: 5px;
+    width: 18px;
+    height: 2px;
     background-color: #333;
-    margin: 6px 0;
-  
+    margin: 3px 0;
+    
+}
+
+.buttons {
+    margin-right: 21px;
+
+}
+
+input[type="checkbox"] {
+    display: none;
+
 }
 
 .responsive-menu {
+    visibility: hidden;
     background-color: #333;
     color: white;
     position: fixed;
@@ -54,17 +67,27 @@ body {
     width: 85.4%;
     right: 0px;
     top: 0px;
-    
 
+}
+
+input[type="checkbox"]:checked ~ .responsive-menu {
+    visibility: visible;
 }
 
 .responsive-menu-text {
     list-style-type: none;
     font-size: 16px;
-    margin-top: 19px;
+    margin-top: 9px;
     text-align: right;
-    margin-right: 19px;
+    display: block;
+    padding: 13px 20px;
+    line-height: 19.2px;
 
+}
+
+.responsive-menu-text:hover {
+    background-color: #E0E0E0;
+    color: black;
 
 }
 
@@ -78,4 +101,63 @@ body {
 .responsive-menu ul {
     padding: 0;
 
+}
+
+
+/* Formulário */
+
+.formulario {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 26px;
+    justify-content: center;
+}
+
+input, select {
+    border-radius: 5px;
+
+}
+
+.campo {
+    margin-bottom: 20px;
+
+}
+
+.campo label {
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+.campo input[type="text"], .campo #transacao{
+    padding: 0.2em;
+    border: 1px solid #979797;
+    width: 94%;
+    height: 32px;
+    display: block;
+    color: #888888;
+    
+}
+
+.campo #transacao {
+    width: 96.2%;
+    height: 40px;
+}
+
+
+.campo select option {
+    padding-right: 1em;
+}
+
+.button {
+    background-color:   #333 ;
+    border-radius: 5px;
+    color: #fff;
+    width: 96.2%;
+    height: 32px;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+.linha {
+    padding-left: 40px;
 }
