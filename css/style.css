@@ -158,6 +158,145 @@ input, select {
     letter-spacing: 0.5px;
 }
 
+/* Extrato */
+
 .linha {
-    padding-left: 40px;
+    
+    width: 90%;
+    margin-top: 29px;
+
+}
+
+.linha2 {
+    width: 90%;
+    margin-top: 2vw;
+}
+
+.linha3 {
+    width: 90%;
+    margin-top: 3px;
+}
+
+.line {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.extrato-linha1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 5%;
+    font-size: 14px;
+
+}
+
+.extrato-linha2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 50px;
+    margin-top: 7px;
+    font-size: 14px;
+    text-align: left;
+    
+}
+
+.plus {
+    font-size: 14px;
+    position: fixed;
+    margin-left: 30px;
+    margin-top: 7px;
+}
+
+.extrato-valor {
+    text-align: right;    
+
+}
+
+.extrato-linha3 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 50px;
+    margin-top: 7px;
+    font-size: 14px;
+    text-align: left;
+    
+}
+
+.extrato-linha4 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 50px;
+    margin-top: 7px;
+    font-size: 14px;
+    text-align: left;
+    
+}
+
+
+.extrato-linha5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 3%;
+    font-size: 14px;
+
+}
+
+
+
+.extrato-title {
+    text-align: center;
+    margin-top: 41px;
+    font-size: 18px;
+
+}
+
+
+.resultado {
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 2vw;
+    
+}
+
+.footer {
+    background-color: black;
+    position: absolute;
+    width: 768px;
+    height: 8px;
+    left: 0px;
+    top: 1016px;
+
+}
+
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+        .formulario { 
+            border: 1px solid black;
+            border-color: black;
+            margin-right: 20px;
+                        
+        }
+
+
+
 }
