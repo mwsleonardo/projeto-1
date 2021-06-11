@@ -95,7 +95,7 @@ input[type="checkbox"]:checked ~ .responsive-menu {
 .responsive-menu-x {
     list-style-type: none;
     margin-left: 20px;
-
+    
 }
 
 .responsive-menu ul {
@@ -210,9 +210,9 @@ input, select {
 
 .plus {
     font-size: 14px;
-    position: fixed;
     margin-left: 30px;
     margin-top: 7px;
+    position: absolute;
 }
 
 .extrato-valor {
@@ -278,7 +278,7 @@ input, select {
 .footer {
     background-color: black;
     position: absolute;
-    width: 768px;
+    width: 411px;
     height: 8px;
     left: 0px;
     top: 1016px;
