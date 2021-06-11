@@ -291,9 +291,7 @@ input, select {
 
 @media (min-width: 768px) {
         .formulario { 
-            border: 1px solid black;
-            border-color: black;
-            margin-right: 20px;
+            
                         
         }
 
