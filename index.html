@@ -8,11 +8,21 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Controle Financeiro</title>
 
+    
 </head>
 
 <!-- Cabeçalho // Header -->
 
 <body>
+
+    <b:if cond=’data:blog.pageType == &quot;item&quot;’>
+    <div id=’subscribe’>
+    <SCRIPT language="JavaScript" type="text/javascript">alert("O desenvolvimento deste projeto faz parte da atividade em HTML/CSS do curso Full Stack da NewTab Academy / Versões responsivas: Mobile, Tablet e Desktop (411px - 768px - 1112px - 1500px)")</SCRIPT>
+    </div>
+    </b:if>
+    
+    
+
     <div class="header">
 
         <img src="images/logo.png" alt="logo" class="logo" />
@@ -30,7 +40,12 @@
 
         </label>
 
+
+
         <!-- Menu responsivo -->
+
+
+        
 
         <nav class="responsive-menu">
             <ul>
@@ -41,39 +56,49 @@
             </li>
             </label> 
 
-            <li class="responsive-menu-text">Cadastro de transações</li>
-            <li class="responsive-menu-text">Limpar dados</li>
-            <li class="responsive-menu-text">Salvar no servidor</li>
+            <li class="responsive-menu-text"><strong>Cadastro de transações</strong></li>
+            <li class="responsive-menu-text"><strong>Limpar dados</li></strong>
+            <li class="responsive-menu-text"><strong>Salvar no servidor</strong></li>
             </ul>
       </nav>
     </div>
 
+    <div class="grid">
+    <div class="nova-transacao"><strong>Nova transação</strong></div>
 
         <!-- Formulario -->
 
-    <div class="formulario">
+
+        
+        <div class="formulario">
         <form>
-            <div class="campo">
-                <label for="transacao">Tipo de Transação</label>
-                <select id="transacao">
-                    <option>Compra</option>    
-                    <option>Venda</option>
-                </select>        
-            </div>
 
             <nav class="grupo">
-                <div class="campo">
+
+                 <div class="campo">
+                <label for="transacao" id="transacao2">Tipo de Transação</label>
+                <select id="transacao">
+                     <option>Compra</option>    
+                    <option>Venda</option>
+                </select>        
+                </div>
+
+                   <div class="campo" id="campo2">
                     <label for="mercadoria">Nome da Mercadoria</label>
                     <input type="text" name="mercadoria" id="mercadoria" placeholder="  Input" required>
                 </div>
 
-                <div class="campo">
-                    <label for="valor">Valor</label>
+                <div class="campo" id="campo3">
+                    <label for="valor" id="valor-text">Valor</label>
                     <input type="text" name="valor" id="valor" placeholder="  R$ 0,00" required>
                 </div>
+
+
+                <button class="button" type="submit" id="botao">Adicionar transação</button>
+
             </nav>
             
-            <button class="button" type="submit">Adicionar transação</button>
+            
 
         </form>
    </div>
@@ -147,12 +172,18 @@
 
         <div class="resultado">[LUCRO]</div>
 
-        <div class="footer"></div>
+
+        
+        
 
 
 
     </div>
 
+
+    </div>
+
+    <div class="footer"></div>
 
 </body>
 </html>

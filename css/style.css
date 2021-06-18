@@ -281,8 +281,12 @@ input, select {
     width: 100%;
     height: 8px;
     left: 0px;
-    top: 700px;
+    bottom: 0;
 
+}
+
+.nova-transacao {
+    visibility: hidden;
 }
 
 
@@ -290,10 +294,418 @@ input, select {
 /* Media Queries */
 
 @media (min-width: 768px) {
-        .formulario { 
-            
-                        
+        .formulario form { 
+            display: flex;
+            flex-direction: row;   
+            align-items: center;
+            align-content: center;
+            background: #FFFFFF;
+            border: 1px solid #979797;
+            box-sizing: border-box;
+            border-radius: 4px;
+            width: 98%;
+            height: 189px;
+                    
         }
+
+
+        
+               
+
+        .grupo {
+            flex-shrink: 0;
+            width: 97%;
+            justify-content: space-between;
+        }
+
+        .campo {
+            flex-shrink: 0;
+            
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+        #campo2 {
+            margin-left: 10px;
+            
+
+        }
+
+        #campo3 {
+            width: 21vw;
+            margin-left: 0px;
+            
+        }
+
+        
+
+        #botao {
+            
+            margin: 0px;
+            padding: 0px;
+            position: fixed;
+            float: right;
+            right: 5%;
+            width: 200px;
+            margin-top: 80px;
+            
+            
+            
+        }
+
+        .nova-transacao {
+            visibility: visible;
+            position: fixed;
+            padding: 0px;
+            height: 20px;
+            width: 50%;
+            margin-left: 40%;
+            margin-top: 20px;
+                      
+        }
+
+        
+        .line .linha {
+            visibility: hidden;
+        }
+
+
+        .campo label {
+            margin-bottom: 0.5em;
+            margin-left: 20px;
+            align-items: center;
+        }
+
+        
+        #valor-text {
+            margin-left: 5px;
+        }
+
+
+
+
+        
+        .campo input[type="text"], .campo #transacao{
+            padding: 0.2em;
+            border: 1px solid #979797;
+            width: 100%;
+            height: 32px;
+            
+            color: #888888;
+            margin-left: 20px;
+            
+        }
+        
+        .campo #transacao {
+            width: 96.2%;
+            height: 40px;
+        }
+        
+        
+        .campo select option {
+            padding-right: 1em;
+            width: 200px;
+        }
+
+        .grupo {
+            display: flex;
+            
+        }
+
+
+        .mercadoria, #mercadoria {
+            width: 45vw;
+            margin-left: 20px;
+            margin-right: 8px;
+            
+        }
+
+                   
+    
+        .valor, #valor {
+            
+            margin-left: 0px;
+            margin-right: 5%;
+            
+            
+
+        }
+
+
+        .responsive-menu {
+            width: 35%;
+        }
+
+
+               
+        .linha2 {
+            width: 95%;
+            margin-top: 2vw;
+        }
+        
+        .linha3 {
+            width: 95%;
+            margin-top: 3px;
+        }
+        
+        .line {
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+
+
+       
+
+
+}
+
+
+
+@media (min-width: 1112px) {
+
+    .formulario {
+        display: flex;
+        justify-content: left;
+        width: 344px;
+        height: 400px;
+        
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .grupo {
+        flex-direction: column;
+        margin-top: 60px;
+        width: 100%;
+        
+    }
+
+
+    #botao {
+            
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        margin-top: 7%;
+        margin-left: 7%;
+        position: relative;
+        width: 96%;
+        
+    }
+    
+
+    
+
+    nav div {
+        margin-top: 20px;
+        width: 90%;
+        margin-left: 3%;
+    }
+
+    #campo2, #mercadoria {
+        margin-top: 20px;
+        width: 92%;
+        margin-left: 3%;
+    }
+    
+    #campo3, #valor {
+        margin-top: 20px;
+        width: 92%;
+        margin-left: 3%;
+        justify-content: right;
+    }
+
+    .campo label {
+        margin-left: 4%;
+    }
+
+    
+    #transacao2 {
+        margin-left: 7%;
+        margin-bottom: 15px;
+    }
+
+        
+    
+
+
+    .formulario form { 
+        display: flex;
+        flex-direction: column;   
+        align-items: center;
+        align-content: center;
+        background: #FFFFFF;
+        border: 1px solid #979797;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 344px;
+        height: 400px;
+        
+
+    }
+
+
+    .nova-transacao {
+        visibility: visible;
+        position: absolute;
+        padding: 0px;
+        height: 20px;
+        width: 50%;
+        margin-left: 120px;
+        margin-top: 40px;
+                  
+    }
+    
+    
+
+
+    .grid {
+        display: flex;
+        margin-right: 20px;    
+        
+    }
+
+    .extrato {
+        width: 100%;
+        
+
+    }
+
+
+    .linha {
+        width: 0px;
+        
+    }
+
+
+    .responsive-menu {
+        visibility: visible;
+        background-color:   white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 40px;
+        margin-top: 10px;
+        margin-right: 5%;
+        width: 400px;
+        
+        
+    }
+
+
+    ul {
+        display: flex;
+        color: black;
+        margin: 0px;
+    }
+
+    ul label {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+  
+    .responsive-menu-text {
+        padding: 0px;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+          
+  
+    }
+
+
+   ul > li:nth-child(n + 4) {
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: black;
+    
+
+   }
+
+
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+    }
+
+    .header-title {
+        display: block;
+        margin-left: 20px;
+           
+        
+    }
+
+    .buttons {
+        visibility: hidden;
+    }
+
+
+    .logo {
+        display: block;
+        margin-left: 5%;
+    }
+
+
+
+
+}
+
+
+@media (min-width: 1500px) {
+
+    .grid {
+        margin-left: 10%
+    }
+
+   
+    .logo {
+        margin-left: 15%;
+    }
+
+    .extrato {
+        width: 65%;
+    }
+
+
+
+    #botao {
+            
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        margin-top: 7%;
+        margin-left: 7%;
+        position: relative;
+        width: 96%;
+        
+    }
+  
+
+
+
+    .responsive-menu-text:hover {
+        background-color: #E0E0E0;
+        color: black;
+        height: 100%;
+    }
+
+
 
 
 
