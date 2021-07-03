@@ -21,6 +21,13 @@ body {
 }
 
 
+span {
+    position: fixed;
+    color: red;
+    margin-left: 20px;
+}
+
+
 /* Cabeçalho // Header */
 
 .header {
@@ -159,6 +166,46 @@ input, select {
 }
 
 /* Extrato */
+
+.linha-borda{
+    border: 1px solid #979797;
+    height: 0;
+    margin-top: 5px;
+}
+
+.destaque{
+    font-weight: bold;
+}
+.separar-titulos{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.produto-extrato{
+   width: 100%; 
+ 
+
+}   
+.produto{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .linha {
     
@@ -307,10 +354,11 @@ input, select {
             height: 189px;
                     
         }
+               
 
 
         
-               
+
 
         .grupo {
             flex-shrink: 0;
