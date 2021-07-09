@@ -89,12 +89,15 @@ input[type="checkbox"]:checked ~ .responsive-menu {
     display: block;
     padding: 13px 20px;
     line-height: 19.2px;
+    cursor: pointer;
 
 }
 
 .responsive-menu-text:hover {
     background-color: #E0E0E0;
     color: black;
+    max-width: 100%;
+    max-height: 100%;
 
 }
 
@@ -171,15 +174,19 @@ input, select {
     border: 1px solid #979797;
     height: 0;
     margin-top: 5px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .destaque{
     font-weight: bold;
+    margin-top: 2%;
 }
 .separar-titulos{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
 .produto-extrato{
@@ -191,8 +198,14 @@ input, select {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    
 }
 
+.coluna-produto {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 5px;
+}
 
 
 
@@ -312,13 +325,12 @@ input, select {
 
 
 .resultado {
-    font-size: 10px;
+    font-size: 12px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 2vw;
+    margin-right: 0;
+    margin-top: 2%;
     
 }
 
@@ -515,6 +527,10 @@ input, select {
 
 
 @media (min-width: 1112px) {
+
+
+    
+    
 
     .formulario {
         display: flex;
@@ -751,6 +767,7 @@ input, select {
         background-color: #E0E0E0;
         color: black;
         height: 100%;
+        
     }
 
 

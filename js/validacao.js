@@ -91,42 +91,69 @@ document.querySelector("form")
 // EXTRATO
 
 var resultado=0.00;
-var result="0,00";
+var result="";
 var transacao=[];
 
 function cadastrar(){
-    if(field != "invalid"){
+    if(field !=null){
         var selecao=document.getElementById("transacao")
         var opcao=selecao.options[selecao.selectedIndex].value;
         var nome_produto=document.getElementById("mercadoria").value;
         var valor_produto =document.getElementById("valor").value;
-        
-    
+          
+         
         if(opcao=="compra"){
-         valor_produto=valor_produto.replace(".","");
+     
+            valor_produto=valor_produto.replace(".","");
             valor_produto=valor_produto.replace(",",".");
-            resultado=resultado-parseFloat(valor_produto); 
+             
+             
+            if(localStorage.getItem("resultado")==null){
+              resultado=resultado-parseFloat(valor_produto);
+            }else{
+              resultado=localStorage.getItem("resultado").toString().replace(",",".")
+              resultado=parseFloat(resultado)-parseFloat(valor_produto);
+            }
+            
+            
+                 
+          
+            
             document.getElementById("mercadoria").value="";
             document.getElementById("valor").value="";
             
                     
-        }else{
+        }else if(opcao=="venda"){
           
             valor_produto=valor_produto.replace(".","");
             valor_produto=valor_produto.replace(",",".");
-            resultado=resultado+parseFloat(valor_produto); 
+    
+        
+            if(localStorage.getItem("resultado")==null){
+              resultado=resultado+parseFloat(valor_produto);
+            }else{
+              resultado=localStorage.getItem("resultado").toString().replace(",",".")
+              resultado=parseFloat(resultado)+parseFloat(valor_produto);
+            }
+            
+                     
+    
             document.getElementById("mercadoria").value="";
             document.getElementById("valor").value="";
           }
           
-         
+          resultado=parseFloat(resultado).toFixed(2);
+          valor_produto=valor_produto.replace(".",",");
+          resultado=resultado.toString().replace(".",",");
+           
+          
     
           transacao.push({nome:nome_produto,valor:valor_produto,tipo:opcao});
           localStorage.setItem("transacao", JSON.stringify(transacao));
           localStorage.setItem("resultado",resultado);
     
       
-         result=localStorage.getItem("resultado").toLocaleString('pt-br', {minimumFractionDigits: 2});
+         result=localStorage.getItem("resultado");
         
         if(result<0){
             
@@ -137,13 +164,10 @@ function cadastrar(){
             document.getElementById("resultado").innerHTML="R$"+result+"<br />[LUCRO]";
            
         }
-        
         listaTransacao();
-
     }
     
-
-}
+    }
 
 
 function listaTransacao(){
@@ -161,7 +185,7 @@ function listaTransacao(){
       
      }).join("");
   
-     result=localStorage.getItem("resultado");
+     result=localStorage.getItem("resultado").toLocaleString('pt-br', {minimumFractionDigits: 2});
       
   
      if(result<0){
@@ -170,7 +194,7 @@ function listaTransacao(){
        
    }else {
     
-        document.getElementById("resultado").innerHTML="R$"+result+"<br />[LUCRO]";
+       document.getElementById("resultado").innerHTML="R$"+result+"<br />[LUCRO]";
       
    }
   
@@ -182,6 +206,8 @@ function listaTransacao(){
     
   }
   
+
+
   listaTransacao();
   
 
@@ -206,13 +232,42 @@ function formatarMoeda() {
     if(valor == 'NaN') elemento.value = '';
 }
 
-// EXTRATO
+// LIMPAR DADOS
 
 function limpar(){
-    var escolha= confirm("Tem certeza que deseja limpar o extrato de transações?");
+    var escolha= confirm("Deseja limpar o extrato de transações?");
      if(escolha==true){
        localStorage.clear();
        window.location.reload();
      }
        
    }
+
+
+//    SALVAR DADOS NA API
+
+var transacaoJson = JSON.stringify(localStorage.getItem('transacao'));
+   function salvarServidor(){
+        var salvar= confirm("Deseja salvar o extrato no servidor?");
+        if(salvar==true){
+
+       fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+        method: "POST",
+        headers: {
+            Authorization: 'Bearer key2CwkHb0CKumjuM',
+            'Content-type': 'application/json',
+            },
+        body: JSON.stringify({
+            records: [{
+                fields: {
+                    Aluno: '2814',
+                    Json: transacaoJson
+                }
+            }]
+        
+        })
+
+       }      
+       
+       )
+    }}
